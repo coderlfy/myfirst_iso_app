@@ -14,6 +14,8 @@
 		005CEC001B3AA1E300D75144 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 005CEBFF1B3AA1E300D75144 /* Images.xcassets */; };
 		005CEC031B3AA1E300D75144 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 005CEC011B3AA1E300D75144 /* LaunchScreen.xib */; };
 		005CEC0F1B3AA1E300D75144 /* MyFirstAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 005CEC0E1B3AA1E300D75144 /* MyFirstAppTests.m */; };
+		009046631B3FA8EE004EFE62 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 009046621B3FA8EE004EFE62 /* MainController.m */; };
+		009046661B3FADBD004EFE62 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 009046651B3FADBD004EFE62 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		005CEC081B3AA1E300D75144 /* MyFirstAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFirstAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		005CEC0D1B3AA1E300D75144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		005CEC0E1B3AA1E300D75144 /* MyFirstAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFirstAppTests.m; sourceTree = "<group>"; };
+		009046611B3FA8EE004EFE62 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainController.h; path = controller/MainController.h; sourceTree = "<group>"; };
+		009046621B3FA8EE004EFE62 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainController.m; path = controller/MainController.m; sourceTree = "<group>"; };
+		009046641B3FADBD004EFE62 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = controller/ViewController.h; sourceTree = "<group>"; };
+		009046651B3FADBD004EFE62 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = controller/ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 		005CEBF11B3AA1E300D75144 /* MyFirstApp */ = {
 			isa = PBXGroup;
 			children = (
+				009046601B3FA89C004EFE62 /* controller */,
 				005CEBF61B3AA1E300D75144 /* AppDelegate.h */,
 				005CEBF71B3AA1E300D75144 /* AppDelegate.m */,
 				005CEBF91B3AA1E300D75144 /* ViewController.h */,
@@ -117,6 +124,17 @@
 				005CEC0D1B3AA1E300D75144 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		009046601B3FA89C004EFE62 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				009046611B3FA8EE004EFE62 /* MainController.h */,
+				009046621B3FA8EE004EFE62 /* MainController.m */,
+				009046641B3FADBD004EFE62 /* ViewController.h */,
+				009046651B3FADBD004EFE62 /* ViewController.m */,
+			);
+			name = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +186,7 @@
 				TargetAttributes = {
 					005CEBEE1B3AA1E300D75144 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 4WQ93GM92N;
 					};
 					005CEC071B3AA1E300D75144 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -219,9 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				009046631B3FA8EE004EFE62 /* MainController.m in Sources */,
 				005CEBFB1B3AA1E300D75144 /* ViewController.m in Sources */,
 				005CEBF81B3AA1E300D75144 /* AppDelegate.m in Sources */,
 				005CEBF51B3AA1E300D75144 /* main.m in Sources */,
+				009046661B3FADBD004EFE62 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,9 +370,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyFirstApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -359,9 +385,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyFirstApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -418,6 +449,7 @@
 				005CEC141B3AA1E300D75144 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		005CEC151B3AA1E300D75144 /* Build configuration list for PBXNativeTarget "MyFirstAppTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +458,7 @@
 				005CEC171B3AA1E300D75144 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
