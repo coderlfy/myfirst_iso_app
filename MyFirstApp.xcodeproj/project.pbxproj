@@ -15,7 +15,8 @@
 		005CEC031B3AA1E300D75144 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 005CEC011B3AA1E300D75144 /* LaunchScreen.xib */; };
 		005CEC0F1B3AA1E300D75144 /* MyFirstAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 005CEC0E1B3AA1E300D75144 /* MyFirstAppTests.m */; };
 		009046631B3FA8EE004EFE62 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 009046621B3FA8EE004EFE62 /* MainController.m */; };
-		009046661B3FADBD004EFE62 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 009046651B3FADBD004EFE62 /* ViewController.m */; };
+		00976C621B6F00D200BE27BE /* HypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00976C611B6F00D200BE27BE /* HypnosisView.m */; };
+		0098229D1B3FC06100F25846 /* ViewTest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0098229C1B3FC06100F25846 /* ViewTest.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +45,9 @@
 		005CEC0E1B3AA1E300D75144 /* MyFirstAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFirstAppTests.m; sourceTree = "<group>"; };
 		009046611B3FA8EE004EFE62 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainController.h; path = controller/MainController.h; sourceTree = "<group>"; };
 		009046621B3FA8EE004EFE62 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainController.m; path = controller/MainController.m; sourceTree = "<group>"; };
-		009046641B3FADBD004EFE62 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = controller/ViewController.h; sourceTree = "<group>"; };
-		009046651B3FADBD004EFE62 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = controller/ViewController.m; sourceTree = "<group>"; };
+		00976C601B6F00D200BE27BE /* HypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HypnosisView.h; sourceTree = "<group>"; };
+		00976C611B6F00D200BE27BE /* HypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HypnosisView.m; sourceTree = "<group>"; };
+		0098229C1B3FC06100F25846 /* ViewTest.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewTest.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,11 +89,10 @@
 		005CEBF11B3AA1E300D75144 /* MyFirstApp */ = {
 			isa = PBXGroup;
 			children = (
+				00976C5F1B6EFFC900BE27BE /* view */,
 				009046601B3FA89C004EFE62 /* controller */,
 				005CEBF61B3AA1E300D75144 /* AppDelegate.h */,
 				005CEBF71B3AA1E300D75144 /* AppDelegate.m */,
-				005CEBF91B3AA1E300D75144 /* ViewController.h */,
-				005CEBFA1B3AA1E300D75144 /* ViewController.m */,
 				005CEBFC1B3AA1E300D75144 /* Main.storyboard */,
 				005CEBFF1B3AA1E300D75144 /* Images.xcassets */,
 				005CEC011B3AA1E300D75144 /* LaunchScreen.xib */,
@@ -129,12 +130,22 @@
 		009046601B3FA89C004EFE62 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				005CEBF91B3AA1E300D75144 /* ViewController.h */,
+				005CEBFA1B3AA1E300D75144 /* ViewController.m */,
 				009046611B3FA8EE004EFE62 /* MainController.h */,
 				009046621B3FA8EE004EFE62 /* MainController.m */,
-				009046641B3FADBD004EFE62 /* ViewController.h */,
-				009046651B3FADBD004EFE62 /* ViewController.m */,
 			);
 			name = controller;
+			sourceTree = "<group>";
+		};
+		00976C5F1B6EFFC900BE27BE /* view */ = {
+			isa = PBXGroup;
+			children = (
+				0098229C1B3FC06100F25846 /* ViewTest.xib */,
+				00976C601B6F00D200BE27BE /* HypnosisView.h */,
+				00976C611B6F00D200BE27BE /* HypnosisView.m */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0098229D1B3FC06100F25846 /* ViewTest.xib in Resources */,
 				005CEBFE1B3AA1E300D75144 /* Main.storyboard in Resources */,
 				005CEC031B3AA1E300D75144 /* LaunchScreen.xib in Resources */,
 				005CEC001B3AA1E300D75144 /* Images.xcassets in Resources */,
@@ -239,10 +251,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				009046631B3FA8EE004EFE62 /* MainController.m in Sources */,
+				00976C621B6F00D200BE27BE /* HypnosisView.m in Sources */,
 				005CEBFB1B3AA1E300D75144 /* ViewController.m in Sources */,
 				005CEBF81B3AA1E300D75144 /* AppDelegate.m in Sources */,
 				005CEBF51B3AA1E300D75144 /* main.m in Sources */,
-				009046661B3FADBD004EFE62 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +383,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyFirstApp/Info.plist;
@@ -386,6 +399,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyFirstApp/Info.plist;

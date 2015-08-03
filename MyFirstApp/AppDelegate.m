@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "MainController.h"
+#import "ViewController.h"
+#import "HypnosisView.h"
 
 @interface AppDelegate ()
 
@@ -18,10 +19,30 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    MainController *main = [[MainController alloc] init];
-    [self.window addSubview:[main view]];
-    //[main release];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [NSThread sleepForTimeInterval:5.0];
+    
+    [self displayHypnosisView];
+    
     return YES;
+}
+
+-(void) displayHypnosisView{
+    HypnosisView *view = [[HypnosisView alloc] initWithFrame:[self.window bounds]];
+    [view setBackgroundColor:[UIColor clearColor]];
+    
+    [self.window addSubview:view];
+    [self.window makeKeyAndVisible];
+}
+
+-(void) displayByViewControl{
+    ViewController *main = [[ViewController alloc] initWithNibName:@"ViewTest" bundle:nil];
+    
+    UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:main];
+    self.window.rootViewController = navController;
+    [self.window makeKeyAndVisible];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
